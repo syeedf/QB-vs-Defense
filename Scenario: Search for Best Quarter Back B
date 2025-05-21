@@ -1,0 +1,7 @@
+Scenario: Search for Best Quarter Back Based on Matchups
+    Given the NFL Stats website list
+    When the user selects A Year And Week
+    THEN a list will contain all the QBs and there Stats
+    and the Def they play that week 
+    and determine whos the best choice
+
