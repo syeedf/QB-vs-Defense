@@ -1,13 +1,21 @@
+from pages.qbList import qb_and_stats_page
+from pages.defList import def_Page
+
 def test_QB_Best_Matchup(browser):
-   # Given the NFL Stats website list
-   # TODO
+   qbsAndStats = qb_and_stats_page(browser)
+   defandstats= def_Page(browser) 
+
+   YEAR= input("What year would you like to check?" )
+
+   # Given the NFL Stats website qblist
+   qbsAndStats.load()
 
     #When the user selects A Year And Week
-    # TODO
+   qbsAndStats.filterByYear(YEAR)
 
     #THEN a list will contain all the QBs and there Stats
-    # TODO
-
+   assert YEAR in qbsAndStats.yearpage() 
+   
     # and the Def they play that week 
     # TODO
 
